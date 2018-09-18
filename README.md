@@ -23,7 +23,7 @@ You can find the starter code in the starter code folder of this Github repo.
 - Navigate to your repo and [create a Pull Request](https://help.github.com/articles/creating-a-pull-request/)
 
 
-## Installation 
+## Installation
 
 ```
 $ cd starter-code
@@ -38,9 +38,11 @@ $ npm start
 
 Let's take a look at the starter code.
 
-There is a JSON file with the producer contacts, named `contacts.json`. Import it and display only the 5 first contacts in a `<table>` and display the `picture`, `name`, and `popularity` of each contact.
+There is a JSON file with the producer contacts, named `contacts.json`. Import it and **create an array of the 5 first contacts** to use as your initial state.
 
-To import it, in the `src/index.js`, you can simply write:
+Display that array of 5 contacts in a `<table>` and display the `picture`, `name`, and `popularity` of each contact.
+
+To import `contacts.json` in `src/App.js`, you can simply write:
 ```js
 import contacts from './contacts.json'
 ```
@@ -52,7 +54,9 @@ At the end of this iteration, your application should look like this:
 
 ### Iteration 2 | Add New Random Contacts
 
-In your application, create a "*Add Random Contact*, so that every time you click on this button, it adds a new random actor. 
+In your application, create a "*Add Random Contact* button so that every time you click on this button it adds a new random actor.
+
+First randomly select a contact from the larger `contacts` array. Then add that contact the array of 5 in your state. Don't forget to `setState()` to cause React to re-render the app.
 
 At the end of this iteration, your website will probably look like this:
 
@@ -61,7 +65,9 @@ At the end of this iteration, your website will probably look like this:
 
 ### Iteration 3 | Sort Contacts By Name And Popularity
 
-The producer asked you to add two new buttons to help him sorting his contacts. Create them so that when you click on it, it sorts the table on the `name` or `popularity` field.
+The producer asked you to add two new buttons to help them to sort their contacts. When you click on one of the buttons it should **sort the table by `name`** (alphabetically) and when click the other it should **sort by `popularity`** (highest first).
+
+Don't forget to `setState()` after you sort!
 
 This is what you may have at the end of this iteration:
 
@@ -70,7 +76,9 @@ This is what you may have at the end of this iteration:
 
 ### Iteration 4 | Remove Contacts
 
-The producer also would like to have the opportunity to remove some of its contacts. Implement a "*Delete*" button on each row of your `<table>` that will let the user remove some contacts.
+The producer also would like to remove some of their contacts. Implement a "*Delete*" button on each row of your `<table>` that will let the user remove the contact they clicked.
+
+When they click, you should get the index of the array of that actor and use it to remove the contact from the array. Don't forget to `setState()` after you remove the contact!
 
 At the end of this iteration, your web page may look like this after playing a little bit with the "*Delete*" buttons.
 
@@ -79,7 +87,7 @@ At the end of this iteration, your web page may look like this after playing a l
 
 ### Iteration 5 | Bonus | Styling
 
-Unfortunately, this contacts list isn't really production ready. So make it fancy!
+Unfortunately, this contact list isn't really production ready. This is the movie business! It's got to sparkle! Add some nice CSS to make the app "pop".
 
 
 

@@ -26,3 +26,65 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/*---------------- Custom CSS ---------------------*/
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #323232;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png"); 
+}
+
+h2 {
+  color: #fff;
+  background: #267281;
+  padding: 20px;
+  width: 492px;
+  margin: auto;
+  margin-bottom: 35px;
+}
+
+button {
+  padding: 20px;
+  border: none;
+  border-radius: 3px;
+  background: #EE6572;
+  color: #FFF;
+  text-transform: uppercase;
+  margin: 10px 20px;
+}
+
+.delete-btn {
+  background: #8D262C;
+}
+
+.sortname-btn {
+  background: #ff9494;
+}
+
+.sortpop-btn {
+  background: #ffb7ad;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+tbody {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #D6D6D6;
+}
+
+th {
+  padding: 10px 20px;
+}
